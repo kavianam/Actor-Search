@@ -1,0 +1,38 @@
+//extends layoutdoctype html
+html(lang='en')
+    head
+        title Search
+        link(rel='stylesheet', type='text/css', href='stylesheets/style.css')
+        meta(name="viewport", content="width=device-width, initial-scale=1")
+    body
+        #loading
+            .box LOADING ...
+        .filmInfo
+        br
+        h1 Search
+        .search
+            select
+                option(value='', selected="", disabled="", hidden="")
+                 - for(i=97; i < 123; i++)
+                    option(value=String.fromCharCode(i))= String.fromCharCode(i)
+
+            br
+            br
+            .list
+        .pagination
+        script#actor-list-template(type='text/x-handlebars-template').
+            <ul>
+            {{#each this}}
+                <li><a href="javascript:void(0)" data-id="{{actor_id}}">{{first_name}} {{last_name}}</a></li>
+            {{/each}}
+            </ul>
+        script#actor-info-template(type='text/x-handlebars-template').
+            <p>
+                <span>X</span>
+                {{film_info}}
+            </p>
+        script#pagination-template(type='text/x-handlebars-template').
+            {{pagination}}
+        script(src='js/handlebars.js')
+        script(src='js/jquery.min.js')
+        script(src='js/script.js')

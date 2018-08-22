@@ -1,0 +1,78 @@
+body {
+  padding: 0 50px;
+  margin: 0;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  text-align: center;
+}
+.list {
+    text-align: left;
+}
+.filmInfo {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 40%;
+    margin: 0 auto;
+    background-color: lightcyan;
+}
+a {
+  color: #00B7FF;
+    text-decoration: none;
+}
+p {
+    padding: 20px 10px;
+    margin: 0;
+}
+li {
+    list-style-type: none;
+    padding: 8px;
+}
+.filmInfo span {
+    position: absolute;
+    top: 0;
+    right: 5px;
+    font-size: 23px;
+    cursor:context-menu;
+}
+h1 {
+    padding: 20px;
+}
+.filmInfo span:hover {
+    color: red;
+}
+.pagination ul {
+    padding: 0;
+}
+.pagination li {
+    display: inline-block;
+}
+.pagination a {
+    padding: 10px;
+}
+.active {
+    background-color: #4CAF50;
+    color: white;
+    cursor:context-menu;
+}
+
+#loading{
+    margin: 0 auto;
+    position: fixed;
+    text-align: center;
+    width: 100%;
+    z-index: 10000;
+    display: none;
+    top: 5px;
+}
+#loading .box {
+    background-color: #dee0f9;
+    background-image: url("ajax-loader.gif");
+    background-position: 94% center;
+    background-repeat: no-repeat;
+    border: 1px solid #dee0f9;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+    color: #990000;
+    display: inline-block;
+    margin: 0 auto;
+    padding: 5px 50px 5px 30px;
+}
